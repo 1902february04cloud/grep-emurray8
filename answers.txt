@@ -8,3 +8,7 @@
 8:grep -o . cities.txt | grep -c 'd'
 9:egrep '(.)\1$' cities.txt
 10:egrep -i '^([a-z])([a-z])[a-z]\2\1$' cities.txt
+bonus: I think it's not possible to do this with only grep. A script would
+need to generate the regex based on the size of the word or you could
+use only grep but it would only work up to a certain high number of letters,
+not any.
