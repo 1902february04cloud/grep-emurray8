@@ -1,0 +1,10 @@
+1:grep -i '^z' cities.txt
+2:grep 'gan\>' cities.txt
+3:egrep -i '^a|^d|^e' cities.txt
+4:grep '\<.ar' cities.txt
+5:grep -iv '^c' cities.txt
+6:egrep '\S{14,}' cities.txt
+7:grep -ic '^b' cities.txt
+8:grep -o . cities.txt | grep -c 'd'
+9:egrep '(.)\1$' cities.txt
+10:egrep -i '^([a-z])([a-z])[a-z]\2\1$' cities.txt
