@@ -1,11 +1,10 @@
 #!/usr/bin/env python3
 def main():
-	fh = open('cities.txt')
-	for line in fh:
-		line = line.strip()
-		reverse = line[::-1]
-		if line.lower() == reverse.lower():
-			print(line)
-	fh.close()
+	with  open('cities.txt') as f:
+		for line in f:
+			line = line.strip()
+			reverse = line[::-1]
+			if line.lower() == reverse.lower():
+				print(line)
 if __name__ == '__main__':
 	main()
