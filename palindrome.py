@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-_my_list = []
 def main():
 	fh = open('cities.txt')
 	for line in fh:
