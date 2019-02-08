@@ -1,14 +1,19 @@
-1:grep -i '^z' cities.txt
-2:grep 'gan\>' cities.txt
-3:egrep -i '^a|^d|^e' cities.txt
-4:grep '\<.ar' cities.txt
-5:grep -iv '^c' cities.txt
-6:egrep '\S{14,}' cities.txt
-7:grep -ic '^b' cities.txt
-8:grep -o . cities.txt | grep -c 'd'
-9:egrep '(.)\1$' cities.txt
-10:egrep -i '^([a-z])([a-z])[a-z]\2\1$' cities.txt
-bonus: I think it's not possible to do this with only grep. A script would
-need to generate the regex based on the size of the word or you could
-use only grep but it would only work up to a certain high number of letters,
-not any.
+#1 grep -i '^z' cities.txt
+#2 grep 'gan\>' cities.txt
+#3 egrep -i '^a|^d|^e' cities.txt
+#4 grep '\<.ar' cities.txt
+#5 grep -iv '^c' cities.txt
+#6 egrep '\S{14,}' cities.txt
+#7 grep -ic '^b' cities.txt
+#8 grep -o . cities.txt | grep -c 'd'
+#9 egrep '(.)\1$' cities.txt
+#10 egrep -i '^([a-z])([a-z])[a-z]\2\1$' cities.txt
+bonus: I struggled to create a grep command that would actually be reliable in finding anagrams.
+Also due to the amount of back references you would probably need to accomodate large anagrams
+this would be extremely inefficient if not impossible. 
+
+I also tried righting a bash script generated a grep command based on the length of the anagram
+but due to limitations of grep itself I still think this is bad.
+
+I did however very easily write a python script that achieves this task. Just execute it in the same
+folder as cities.txt, no args.
